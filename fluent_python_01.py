@@ -40,7 +40,7 @@ for country, _ in traveller_ids:
 
 # tuple unpacking
 print('tuple unpacking')
-latitude, longitude = lax_coordinates
+latitude, longitude = lax_cordinates
 print('latitude :: ', latitude )
 print('longitude :: ', longitude)
 
@@ -105,4 +105,3 @@ tokio = City('Tokio', 'JP', 36.933, (35.689722, 139.691667))
 print(tokio)
 print(tokio.population)
 print(City._fields)
-
