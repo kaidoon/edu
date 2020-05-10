@@ -40,7 +40,7 @@ for country, _ in traveller_ids:
 
 # tuple unpacking
 print('tuple unpacking')
-latitude, longitude = lax_cordinates
+latitude, longitude = lax_coordinates
 print('latitude :: ', latitude )
 print('longitude :: ', longitude)
 
@@ -101,7 +101,13 @@ for name, cc, pop, (latitude, longitude) in metro_areas:
 # enhanced with field names and a class name (helps debugging)
 
 City = namedtuple('City', 'name country population coordinates')
-tokio = City('Tokio', 'JP', 36.933, (35.689722, 139.691667))
-print(tokio)
-print(tokio.population)
+tokyo = City('Tokio', 'JP', 36.933, (35.689722, 139.691667))
+print(tokyo)
+print(tokyo.population)
 print(City._fields)
+
+tokyo = City(name='Tokyo', country='JP', population='36.933', coordinates=(35.689722, 139.6916679))
+print(tokyo.population)
+print(tokyo.population)
+print(tokyo.coordinates)
+print(tokyo[1])
