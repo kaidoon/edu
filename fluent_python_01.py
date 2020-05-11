@@ -111,3 +111,31 @@ print(tokyo.population)
 print(tokyo.population)
 print(tokyo.coordinates)
 print(tokyo[1])
+
+LatLong = namedtuple('LatLong', 'lat long')
+delhi_data = ('Dehlhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))
+delhi = City._make(delhi_data)
+pp.pprint(delhi._asdict())
+
+for key, value in delhi._asdict().items():
+    print(key + ' :: ' , value)
+
+# Tuples as Immutable Lists
+# Slicing
+# Why slices and range exclude the last item
+# -> it is easy to see the length of a slice or range when only stop position is given
+# -> easy to compute the lengthe of a slice or range are given : stop - start
+# -> easy to split sequence in two parts at index x :: my_list[:x] and my_list[x:]
+l = [10, 20, 30, 40, 50, 60]
+print(l)
+print(l[:2])
+print(l[2:])
+print(l[:3])
+print(l[3:])
+print(l[::-1])
+
+#eypression seq[start:stop:step]
+s = 'bicycle'
+print(s[::3])
+print(s[::-1])
+print(s[::-2])
